@@ -1,0 +1,14 @@
+# Criação do database dos times
+create database dbTimeFutebol;
+
+# Ativa o database a ser utilizado
+	use dbTimeFutebol;
+
+create table tblJogadores(
+	idJogadores int auto_increment not null,
+    nome varchar(100) not null,
+    times varchar(100) not null,
+    posicao varchar(100) not null
+
+
+);
