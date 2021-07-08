@@ -27,6 +27,8 @@ app.get('/listagem', (req, res) => {
    
 })
 
+
+
 app.get('/deletar/:idJogadores',  function(req , res) {
     jogadores.destroy({where: {'idJogadores': req.params.idJogadores}}).then(function(){
         res.send("<script> alert('Registro apagado com sucesso!'); location.href = '../listagem'; </script>")
@@ -43,7 +45,7 @@ app.post('/add', function(req, res){
     }).then(function(){
         res.send("<script> alert('Registro inserido com sucesso!'); location.href = '../'; </script>")
     }).catch(function(erro){
-        res.send("Erro ao inserir registro!" + erro)
+        res.send("<script> alert('Erro ao inserir registro!'); location.href = '../'; </script>" + erro)
     })
 })
 
